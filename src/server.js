@@ -19,11 +19,11 @@ app.use(productRouter)
 
 app.use(errorHandler)
 
-// app.all('/*', (req, res) => {
-//   res.status(404).json({
-//     status: 404,
-//     message: req.url + ' is not found'
-//   })
-// })
+app.all('/*', (req, res) => {
+  res.status(404).json({
+    status: 404,
+    message: req.url + ' is not found'
+  })
+})
 
 app.listen(PORT, () => console.log(8000))
