@@ -1,0 +1,58 @@
+[
+    {
+        "productId": 1,
+        "subCategoryId": 1,
+        "model": "redmi",
+        "productName": "redmi note 11 pro",
+        "color": "black",
+        "price": "140"
+    },
+    {
+        "productId": 2,
+        "subCategoryId": 1,
+        "model": "samsung",
+        "productName": "galaxy s20",
+        "color": "white",
+        "price": "250"
+    },
+    {
+        "productId": 3,
+        "subCategoryId": 2,
+        "model": "samsung",
+        "productName": "samsung smart tv pro max",
+        "color": "dark",
+        "price": "350"
+    },
+    {
+        "productId": 4,
+        "subCategoryId": 2,
+        "model": "Artel",
+        "productName": "Artel ultra hd 8k",
+        "color": "yellow",
+        "price": "400"
+    },
+    {
+        "productId": 5,
+        "subCategoryId": 3,
+        "model": "hp",
+        "productName": "hp pavilion gaming",
+        "color": "black",
+        "price": "800"
+    },
+    {
+        "productId": 6,
+        "subCategoryId": 4,
+        "model": "loro piana",
+        "productName": "loro piana 41 xl",
+        "color": "black",
+        "price": "400"
+    },
+    {
+        "productId": 7,
+        "subCategoryId": 5,
+        "model": "polo",
+        "productName": "polo sport xl",
+        "color": "gray",
+        "price": "100"
+    }
+]
