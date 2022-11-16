@@ -8,7 +8,7 @@ import { categoryPostValidation, categoryPutValidation, ParamValidation } from '
 const GET = (req, res, next) => {
   try {
     const allCategories = read('categories')
-    const allSubCategories = read('subCategories')
+    const allSubCategories = read('subcategories')
 
     allCategories.map(e => e.subCategories = allSubCategories.filter(j => e.categoryId == j.categoryId).filter(d => delete d.categoryId))
 
@@ -33,7 +33,7 @@ const GETBYID = (req, res, next) => {
     const { id } = value
 
     const allCategories = read('categories')
-    const allSubCategories = read('subCategories')
+    const allSubCategories = read('subcategories')
 
     const foundCategory = allCategories.find(e => e.categoryId == id)
 

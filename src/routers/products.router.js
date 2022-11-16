@@ -3,7 +3,7 @@ import controller from '../controllers/products.controller.js'
 import checkToken from '../middlewares/checkToken.js'
 
 
-const router =  Router()
+const router = Router()
 
 router.get('/products', controller.GET)
 router.get('/products/:id', controller.GETBYID)
