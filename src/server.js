@@ -1,5 +1,5 @@
 import express from 'express'
-import { PORT } from './config.js'
+import { PORT } from './configs/config.js'
 import errorHandler from './middlewares/errorHandler.js'
 import userRouter from './routers/user.router.js'
 import categoryRouter from './routers/category.router.js'
