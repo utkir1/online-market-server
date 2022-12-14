@@ -7,6 +7,7 @@ import subCategoryRouter from './routers/subcategory.router.js'
 import productRouter from './routers/products.router.js'
 
 
+
 const app = express()
 app.use(express.json())
 
@@ -15,7 +16,6 @@ app.use(categoryRouter)
 app.use(subCategoryRouter)
 app.use(productRouter)
 
-app.use(product)
 
 
 app.use(errorHandler)
