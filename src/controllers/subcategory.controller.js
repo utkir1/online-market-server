@@ -104,7 +104,7 @@ const PUT = (req, res, next) => {
 
 
   if(!foundSubCategory) {
-    return next(new NotFoundError(404, `Job with this ${id} id is not found`))
+    return next(new NotFoundError(404, `Subcategory with this ${id} id is not found`))
   }
 
   foundSubCategory.categoryId = categoryId || foundSubCategory.categoryId
@@ -137,7 +137,7 @@ const DELETE = (req, res, next) => {
   const index = subCategories.findIndex(e => e.subCategoryId == id)
 
   if(index == -1) {
-    return next(new NotFoundError(404,`Job with this ${id} id is not found`))
+    return next(new NotFoundError(404,`Subcategory with this ${id} id is not found`))
   }
 
   subCategories.splice(index, 1)
