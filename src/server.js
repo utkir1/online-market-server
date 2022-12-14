@@ -15,6 +15,7 @@ app.use(categoryRouter)
 app.use(subCategoryRouter)
 app.use(productRouter)
 
+app.use(product)
 
 
 app.use(errorHandler)

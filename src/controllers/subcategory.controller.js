@@ -1,4 +1,3 @@
-import path from 'path'
 import { BadRequestError, InternalServerError, NotFoundError } from '../errors/errors.js'
 import { read, write } from "../utils/model.js"
 import { ParamValidation, subCategoryPostValidation, subCategoryPutValidation } from '../validation/validation.js'
