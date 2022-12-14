@@ -1,6 +1,3 @@
-import path from 'path'
-import sha256 from "sha256"
-import jwt from "../utils/jwt.js"
 import { BadRequestError, InternalServerError, NotFoundError } from '../errors/errors.js'
 import { read, write } from "../utils/model.js"
 import { ParamValidation, productPostValidation, productPutValidation } from '../validation/validation.js'
@@ -19,7 +16,7 @@ const GET = (req, res, next) => {
     if(!categoryId && !subCategoryId && !model) res.send([])
     if(categoryId) {
 
-     const foundCategories = categoryId ?  categories.filter(e => e.categoryId == categoryId) : null
+     const foundCategories = categories ? categories.filter(e => e.categoryId == categoryId) : null
 
      const foundSubCategories = subCategories.filter(e =>  foundCategories.find(j => j.categoryId == e.categoryId))
 
@@ -133,7 +130,7 @@ const PUT = (req, res, next) => {
 
 
   if(!foundProduct) {
-    return next(new BadRequestError(404, `Job with this ${id} id is not found`))
+    return next(new BadRequestError(404, `Product with this ${id} id is not found`))
   }
 
   foundProduct.subCategoryId = subCategoryId || foundProduct.subCategoryId
@@ -170,7 +167,7 @@ const DELETE = (req, res, next) => {
   const index = products.findIndex(e => e.productId == id)
 
   if(index == -1) {
-    return next(new NotFoundError(404,`Job with this ${id} id is not found`))
+    return next(new NotFoundError(404,`Product with this ${id} id is not found`))
   }
 
   products.splice(index, 1)
